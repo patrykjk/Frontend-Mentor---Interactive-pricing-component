@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontend Mentor | Interactive pricing component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
 </head>
+
 <body>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+  <header>
+    <h1 class="title">Simple, traffic-based pricing</h1>
+    <p class="subtitle">Sign-up for our 30-day trial. <br> No credit card required. </p>
+  </header>
 
-  Pageviews
-  $ /month
+  <form action="" class="card">
+    <p class="page-views"><span></span> Pageviews</p>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+    <input class="slider" type="range" min="0" value="2">
 
-  Unlimited websites
-  100% data ownership
-  Email reports
+    <p class="price"><span></span> / month</p>
 
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="plan-options">
+      <label for="monthly">Monthly Billing</label>
+      <input type="radio" id="monthly" name="subscription-plan" value="monthly">
+
+      <div class="plan-options-toggle-btn"></div>
+
+      <label for="yearly">Yearly Billing</label>
+      <input type="radio" id="yearly" name="subscription-plan" value="yearly">
+    </div>
+
+    <div class="card-footer">
+      <div class="features">
+        <p class="feature">Unlimited websites</p>
+        <p class="feature">100% data ownership</p>
+        <p class="feature">Email reports</p>
+      </div>
+
+      <button>Start my trial</button>
+    </div>
+
+  </form>
+
 </body>
+
 </html>
